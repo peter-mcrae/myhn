@@ -4,23 +4,23 @@
             "404": "errors/404",
             "500": "errors/500",
             "503": "errors/503"
-        }
-//      "appsec": {
-//        "csrf": true,
-//        "csp": false,
-//        "p3p": false,
-//        "xframe": "SAMEORIGIN"
-//      },
+        },
+		"appsec": {
+			"csrf": true,
+			"csp": false,
+			"p3p": false,
+			"xframe": "SAMEORIGIN"
+		},
 //
 //      "compiler": {
 //          "dust": "templates",
 //          "less": "css"
 //      },
 //
-//      "session": {
-//          "module": "memory",
-//          "secret": "d3034e07b659f21775c9cf57f7ea6cdf166d7561"
-//      },
+		"session": {
+		    "module": "memory",
+	        "secret": "d3034e07b659f21775c9cf57f7ea6cdf11214232"
+		}
 //
 //      "static": {
 //          "srcRoot": "path:./public",
