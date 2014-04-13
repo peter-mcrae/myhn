@@ -5,3 +5,4 @@
 db/initdb.js
 config/settings-secret.env
 .heroku
+config/settings.env
