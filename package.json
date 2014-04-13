@@ -31,7 +31,8 @@
         "moment": "2.6.0",
         "async": "~0.7.0",
         "passport": "~0.2.0",
-        "passport-twitter": "1.0.2" 
+        "passport-twitter": "1.0.2",
+        "nodetime":"0.8.15" 
     },
     "devDependencies": {
         "mocha": "~1.17.0",

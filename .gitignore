@@ -1,7 +1,7 @@
 .DS_Store
 .idea/
 .build/
-node_modules/
 *.iml
 db/initdb.js
 config/settings-secret.env
+.heroku

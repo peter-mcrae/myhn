@@ -1,5 +1,12 @@
 'use strict';
 
+if(process.env.NODETIME_ACCOUNT_KEY) {
+  require('nodetime').profile({
+    accountKey: process.env.NODETIME_ACCOUNT_KEY,
+    appName: 'dev-myhn' // optional
+  });
+}
+
 
 var kraken = require('kraken-js'),
     express = require('express'),
