@@ -4,9 +4,8 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        <h1>Welome to MYHN</h1>
+        <p>MYHN is your personal hacker news like message board. You can submit posts, add tags, comment, and more. It's easy to save intersting content you find online from any device. Your boards can be public or private. </a></p>
       </div>
     </div>
 
@@ -14,19 +13,19 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Use the Web Form</h2>
+          <p>Login using your twitter account to create new posts using the web form. </p>
+          <p><a class="btn btn-default" href="#" role="button">Add a Post</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Install a Bookmarklet</h2>
+          <p>Create a custom bookmarklet for your account. Simply click the bookmarklet when you find an interesting article anywhere online and it will be posted to your board. </p>
+          <p><a class="btn btn-default" href="#" role="button">Configure</a></p>
        </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Send an Email</h2>
+          <p>Send an email to your MYHN email address to create a new post. The subject will be used as the post title, the sending email address will set the author and the body of the email will be the post body.</p>
+          <p><a class="btn btn-default" href="#" role="button">Request and Email</a></p>
         </div>
       </div>
 
