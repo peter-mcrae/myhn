@@ -15,12 +15,12 @@ function commentRoutes(app){
 		});
 	});
 
-	app.post('/comment/postId', function(req,res){
-		comment.create(req.body, function(err){
+	app.post('/comment/postId/:postId', function(req,res){
+		comment.create(req.params.postId,req.body, function(err){
 			if(err){
 				throw err;
 			}
-			res.send(200);
+			res.redirect('back');
 		});
 	});
 
