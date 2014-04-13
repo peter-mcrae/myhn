@@ -7,7 +7,7 @@
          
 			  <div class="form-group">
 			    <label for="inputAuthor">Author</label>
-			    <input name="author" type="text" class="form-control" id="inputAuthor" placeholder="Author">
+			    <input name="author" type="text" class="form-control" id="inputAuthor" placeholder="Author" value="{#user}{username}{/user}">
 			  </div>
 			  <div class="form-group">
 			    <label for="inputSubject">Subject</label>

@@ -5,7 +5,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Welome to MYHN</h1>
-        <p>MYHN is your personal hacker news like message board. You can submit posts, add tags, comment, and more. It's easy to save intersting content you find online from any device. Your boards can be public or private. </a></p>
+        <p>MYHN is your personal hacker news like message board. You can submit posts, add tags, comment, and more. It's easy to save interesting content you find online from any device. MYHN started as a way to learn NodeJS and is a work in progress. It's built on the <a href="http://krakenjs.com/"> KrakenJS </a> framework w/ Mongo as the datastore. Checkout the code on <a href="https://github.com/peter-mcrae/myhn">Github</a>. </p>
       </div>
     </div>
 
@@ -15,17 +15,17 @@
         <div class="col-md-4">
           <h2>Use the Web Form</h2>
           <p>Login using your twitter account to create new posts using the web form. </p>
-          <p><a class="btn btn-default" href="#" role="button">Add a Post</a></p>
+          <p><a class="btn btn-default" tabindex="-1" data-toggle="modal" href="/createPost" data-target="#createPostModal" role="button">Add a Post</a></p>
         </div>
         <div class="col-md-4">
           <h2>Install a Bookmarklet</h2>
           <p>Create a custom bookmarklet for your account. Simply click the bookmarklet when you find an interesting article anywhere online and it will be posted to your board. </p>
-          <p><a class="btn btn-default" href="#" role="button">Configure</a></p>
+          <p><a class="btn btn-default" tabindex="-1" data-toggle="modal" href="/configureBookmarklet" data-target="#configureBookmarklet" role="button">Configure</a></p>
        </div>
         <div class="col-md-4">
           <h2>Send an Email</h2>
           <p>Send an email to your MYHN email address to create a new post. The subject will be used as the post title, the sending email address will set the author and the body of the email will be the post body.</p>
-          <p><a class="btn btn-default" href="#" role="button">Request and Email</a></p>
+          <p><a class="btn btn-default" tabindex="-1" data-toggle="modal" href="/requestEmail" data-target="#requestEmail" role="button">Learn More</a></p>
         </div>
       </div>
 
@@ -35,4 +35,23 @@
         <p>&copy; Peter McRae (@peter_mcrae)</p>
       </footer>
     </div> <!-- /container -->
+
+    <!-- Configure Bookmarklet Modal -->
+  <div class="modal fade" id="configureBookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Request email Modal -->
+  <div class="modal fade" id="requestEmail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+      </div>
+    </div>
+  </div>
+
 {/container}

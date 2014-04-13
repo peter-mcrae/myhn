@@ -38,11 +38,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">
-          	{?user}
-          		MYHN: {#user}{username}{/user}
-          	{:else}
           	MYHN
-          	{/user}
           </a>
         </div>
         <div class="collapse navbar-collapse">

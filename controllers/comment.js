@@ -5,7 +5,6 @@ var comment = require('../lib/comment.js');
 
 function commentRoutes(app){
 
-
 	app.get('/comment/postId', function(req,res){
 		comment.readAll({postId:req.params.postId},function(err,data){
 			if(err){

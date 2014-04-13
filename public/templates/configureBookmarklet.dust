@@ -1,0 +1,14 @@
+	
+		<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Configure Bookmarklet</h4>
+        </div>
+        <div class="modal-body">
+         
+			  Drag your bookmarklet:  <a href='javascript:(function(){var img=new Image();img.src="http://dev-myhn.herokuapp.com/bookmarklet/post?"+"author={#user}{username}{/user}&"+"subject="+document.title+"&"+"link="+window.location.href})()'>myhn</a> to your bookmark bar.
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-primary">Close </button>
+        </div>
+

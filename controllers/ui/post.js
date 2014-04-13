@@ -17,10 +17,17 @@ function postRoutes(app){
 	});
 
 	app.get('/createPost', function(req,res){
-		res.render('createPost');
+		if (!req.isAuthenticated()){
+			return res.render('pleaseLoginModal');
+		}
+		var data = {user:req.user};
+		res.render('createPost',data);
 	});
 
 	app.get('/editPost/:id', function(req,res){
+		if (!req.isAuthenticated()){
+			return res.render('pleaseLoginModal');
+		}
 		post.read(req.params.id, function(err,data){
 			if(err){
 				throw err;

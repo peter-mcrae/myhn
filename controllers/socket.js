@@ -4,10 +4,11 @@ var socket = require('socket.io');
 
 function setupSocketIO(app){ 
 
-	var io = socket.listen(app.listen(8001));
+	var io = socket.listen(app);
 
 	io.sockets.on('connection', function (socket) {
-	    socket.on('post', function (room) {
+
+	    socket.on('viewPost', function (room) {
 	        socket.join(room);
 	    });
 	    socket.on('comment', function (data) {

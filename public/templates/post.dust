@@ -25,7 +25,7 @@
 		<h3>Tags</h3>
 		<h3>
 		{#tags}
-			<span class="label label-default">{.}</span>
+			<span style='margin-right:10px' class="label label-default">{.}</span>
 		{/tags}
 		</h3>
 
@@ -47,7 +47,7 @@
   			<i class="fa fa-plus-circle fa-lg"> </i>
   			Add Comment
   		</a>-->
-  		
+  	</h4>	
   		<div id="form">	
 			<form method="post" action="/comment/postId/{_id}">
 				<input type="hidden" name="_csrf" value="{_csrf}" />
@@ -56,12 +56,15 @@
 			</form>
 		</div>
 
-	</h4>
+	
 	<div class="modal fade" id="editPostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     	<div class="modal-dialog">
       		<div class="modal-content">
         	</div>
     	</div>
     </div>
-</div>   
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+
 {/container}		
