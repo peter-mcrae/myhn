@@ -11,6 +11,7 @@ module.exports = function (app) {
 
     app.get('/', function (req, res) {
         
+        model.user = req.user;
         res.render('index', model);
         
     });

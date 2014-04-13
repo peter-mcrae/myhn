@@ -1,23 +1,14 @@
-'use strict'
+'use strict';
 
-var board = require('../lib/board.js');
+var board = require('../lib/board.js'),
+	post = require('../lib/post.js');
 
 
 function boardRoutes(app){
 
-	//get a board
-	app.get('/board/:id', function(req,res){
-		res.render('board');
-		/*board.read(req.params.id, function(err,data){
-			if(err){
-				throw err;
-			}
-			res.json(data);
-		});*/
-	});
 
 	app.post('/board', function(req,res){
-		board.delete(req.body, function(err){
+		board.create(req.body, function(err){
 			if(err){
 				throw err;
 			}
@@ -26,7 +17,7 @@ function boardRoutes(app){
 	});
 
 	app.put('/board/:id', function(req,res){
-		board.delete(req.params.id, req.body, function(err){
+		board.update(req.params.id, req.body, function(err){
 			if(err){
 				throw err;
 			}
@@ -36,7 +27,7 @@ function boardRoutes(app){
 
 
 	app.delete('/board/:id', function(req,res){
-		board.delete(req.params.id, function(err){
+		board.del(req.params.id, function(err){
 			if(err){
 				throw err;
 			}

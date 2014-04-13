@@ -4,3 +4,4 @@
 node_modules/
 *.iml
 db/initdb.js
+config/settings-secret.env

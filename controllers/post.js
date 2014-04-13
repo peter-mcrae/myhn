@@ -1,13 +1,13 @@
-'use strict'
+'use strict';
 
-var post = require('../lib/post.js');
+var post = require('../lib/post.js'), 
+	postModel = require('../models/post.js');
 
 
 function postRoutes(app){
 
-	//get a post
-	app.get('/post/:id', function(req,res){
-		post.read(req.params.id, function(err,data){
+	app.get('/post', function(req,res){
+		post.readAll({},function(err,data){
 			if(err){
 				throw err;
 			}
@@ -16,30 +16,42 @@ function postRoutes(app){
 	});
 
 	app.post('/post', function(req,res){
-		post.delete(req.body, function(err){
+		if (!req.isAuthenticated()){
+			return res.send(401);
+		}
+		post.create(req.body, function(err,data){
 			if(err){
 				throw err;
 			}
-			res.send(200);
+			//todo if ajax return 200
+			res.redirect('/post/'+data[0]._id);
 		});
 	});
 
 	app.put('/post/:id', function(req,res){
-		post.delete(req.params.id, req.body, function(err){
+		if (!req.isAuthenticated()){
+			return res.send(401);
+		}
+		post.update(req.params.id, req.body, function(err){
 			if(err){
 				throw err;
 			}
-			res.send(200);
+			//todo if ajax return 200
+			res.redirect('back');
 		});
 	});
 
 
 	app.delete('/post/:id', function(req,res){
-		post.delete(req.params.id, function(err){
+		if (!req.isAuthenticated()){
+			return res.send(401);
+		}
+		post.del(req.params.id, function(err){
 			if(err){
 				throw err;
 			}
-			res.send(200);
+			//todo: if ajax return a 200
+			res.redirect('back');
 		});
 	});
 

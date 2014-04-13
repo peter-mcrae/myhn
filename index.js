@@ -2,8 +2,12 @@
 
 
 var kraken = require('kraken-js'),
+    express = require('express'),
+    passport = require('passport'),
+    twitter = require('./lib/passport-twitter.js'),
     app = {};
 
+require('./lib/helper-format-date.js');
 
 app.configure = function configure(nconf, next) {
     // Async method run on startup.
@@ -13,10 +17,15 @@ app.configure = function configure(nconf, next) {
 
 app.requestStart = function requestStart(server) {
     // Run before most express middleware has been registered.
+
 };
 
 
 app.requestBeforeRoute = function requestBeforeRoute(server) {
+    server.use(passport.initialize());
+
+    server.use(passport.session());
+    server.use(express.methodOverride());
     // Run before any routes have been added.
 };
 

@@ -1,0 +1,66 @@
+{>"layouts/master" /}
+
+{<container}
+
+<div class= "postcontainer" data-postId="{_id}">
+	<div style='margin-top:10px' class="post">
+		<p class="lead">	
+			<span style='margin-right:10px'>{subject}</span>
+			<a data-toggle="modal" data-target="#editPostModal" href="/editPost/{_id}">
+				<span class="glyphicon glyphicon-pencil"> </span>
+			</a>
+		</p>
+		<span>posted by <b>{author}</b> on <b>{@formatDate date="{theDate}" format="dddd MMM Do YY"/}</b></span> 
+	</div>
+	
+	<div>
+		<br>
+		<a target="blank" href="{link}"> {link} </a>
+		<br>
+		<br>
+		<span class="posttext text"> {text} </span>
+	</div>
+	
+	<div class="commentcontainer" style="margin-top:25px">
+		<h3>Tags</h3>
+		<h3>
+		{#tags}
+			<span class="label label-default">{.}</span>
+		{/tags}
+		</h3>
+
+		<h3>Comments</h3>
+			{#comments}
+			<div class="well well-sm" style="width:75%">
+				<span class="text">
+					{text}
+					<br>
+					<br>
+				</span>
+			</div>
+			{/comments}
+		
+	</div>
+	
+	<h4>
+		<!--<a class="create fancybox" href="#form">
+  			<i class="fa fa-plus-circle fa-lg"> </i>
+  			Add Comment
+  		</a>-->
+  		
+  		<div id="form">	
+			<form method="post" action="/comment/postId/{_id}">
+				<textarea style="width:75%" id="comment" rows="7"  name="comment"> </textarea><br>
+				<button type="submit" class="btn btn-default">Add Comment</button>
+			</form>
+		</div>
+
+	</h4>
+	<div class="modal fade" id="editPostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-dialog">
+      		<div class="modal-content">
+        	</div>
+    	</div>
+    </div>
+</div>   
+{/container}		
